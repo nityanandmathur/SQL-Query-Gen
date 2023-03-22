@@ -62,9 +62,9 @@ text = st.text_input("Text to parse")
 
 if st.button('Find'):
     result = find_query(text)
-    db = execute_query(result)
     st.markdown('## Results')
     st.markdown('Query: ')
     st.write(result)
+    db = execute_query(result)
     st.markdown('Output from database: ')
     st.write(db)
