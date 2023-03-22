@@ -19,3 +19,7 @@
 ```bash
     streamlit run app.py
 ```
+
+## Snapshots
+![](info.png)
+![](roll.png)
