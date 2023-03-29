@@ -16,12 +16,12 @@ def find_query(sentence):
     conditional_match = re.search(conditional_regex, sentence)
     all_match = re.search(all_regex, sentence)
     keywords = {
-        'more than': '>',
         'is more than': '>',
-        'less than': '<',
+        'more than': '>',
         'is less than': '<',
-        'equal to': '=',
+        'less than': '<',
         'is equal to': '=', 
+        'equal to': '=',
         'and':','
     }
 
@@ -43,7 +43,7 @@ def find_query(sentence):
         condition = conditional_match.group(2)
         for x in keywords:
             if x in select: 
-                select=select.replace(x,keywords[x])
+                select=select.replace(x,keywords[x])    
             if x in condition: 
                 condition=condition.replace(x,keywords[x])
         
@@ -57,6 +57,7 @@ def find_query(sentence):
 
 def execute_query(query):
     cursor.execute(query)
+    conn.commit()
     db = cursor.fetchall()
     return db
 
