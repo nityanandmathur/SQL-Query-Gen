@@ -17,8 +17,11 @@ def find_query(sentence):
     all_match = re.search(all_regex, sentence)
     keywords = {
         'more than': '>',
+        'is more than': '>',
         'less than': '<',
-        'equal to': '=', 
+        'is less than': '<',
+        'equal to': '=',
+        'is equal to': '=', 
         'and':','
     }
 
