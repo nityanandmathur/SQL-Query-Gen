@@ -7,7 +7,7 @@ cursor = conn.cursor()
 
 def find_query(sentence):
     select_regex = r"give me the (.+) of the students"
-    update_regex = r"update the (.+) of the student having roll no (\d+) to (\d+)"
+    update_regex = r"update the (.+) of the student having roll no (\d+) to (.+)"
     conditional_regex = r"show the (.+) of the students whose (.+)"
     all_regex = r"give me all the (.+) of the students"
 
